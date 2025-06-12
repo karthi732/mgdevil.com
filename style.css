@@ -1,0 +1,99 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e2f;
+  color: white;
+}
+
+.hidden {
+  display: none;
+}
+
+.login-container, .app-container {
+  max-width: 1000px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #2a2a3d;
+  border-radius: 8px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+h1, h2 {
+  text-align: center;
+}
+
+input[type="text"], input[type="number"], input[type="password"] {
+  padding: 10px;
+  margin: 5px;
+  width: 180px;
+  border-radius: 5px;
+  border: none;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px 5px;
+  border: none;
+  border-radius: 5px;
+  background-color: #00bcd4;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0097a7;
+}
+
+.form-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+label {
+  margin: 5px;
+}
+
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+table, th, td {
+  border: 1px solid #444;
+}
+
+th, td {
+  padding: 12px;
+  text-align: center;
+}
+
+.controls {
+  text-align: center;
+  margin-top: 20px;
+}
+
+canvas {
+  display: block;
+  margin: 20px auto;
+}
+
+body.light {
+  background-color: white;
+  color: black;
+}
+
+body.light .login-container, 
+body.light .app-container {
+  background-color: #f0f0f0;
+  color: black;
+}
+
+body.light input, 
+body.light button {
+  color: black;
+}

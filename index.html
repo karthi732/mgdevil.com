@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Product Order App</title>
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <div class="login-container" id="loginContainer">
+    <h2>🔐 Login</h2>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+  <div class="app-container hidden" id="appContainer">
+    <h1>🛍️ Product Order Dashboard</h1>
+    <div class="form-section">
+      <input type="text" id="productName" placeholder="Product Name">
+      <input type="number" id="productQty" placeholder="Quantity">
+      <input type="number" id="productPrice" placeholder="Price">
+      <label><input type="checkbox" id="applyDiscount"> 5% Discount</label>
+      <label><input type="checkbox" id="applyTax"> 18% Tax</label>
+      <button onclick="addProduct()">➕ Add Product</button>
+    </div>
+
+    <table id="productTable">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Quantity</th>
+          <th>Price</th>
+          <th>Total</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <div class="controls">
+      <button onclick="deleteSelected()">🗑️ Delete Selected</button>
+      <button onclick="exportToCSV()">💾 Export to CSV</button>
+      <button onclick="showChart()">📊 Show Chart</button>
+      <button onclick="generateInvoice()">🧾 Generate Invoice</button>
+      <button onclick="toggleTheme()">🌗 Toggle Theme</button>
+    </div>
+
+    <h2 id="totalCost">Total Cost: ₹0.00</h2>
+
+    <canvas id="chartCanvas" width="600" height="400" class="hidden"></canvas>
+  </div>
+</body>
+</html>
+<script src="script.js"></script>
